@@ -11,6 +11,9 @@ async function bootstrap() {
       //si pasas una propiedad que no existe en el objeto, da error 400, y te dice la propiedad que no existe en el objeto
       forbidNonWhitelisted: true,
       transform: true,
+      transformOptions: {
+        enableImplicitConversion: true,
+      },
     }),
   );
   await app.listen(3000);
